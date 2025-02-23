@@ -1,0 +1,7 @@
+{
+  "name": "calculate_similarity",
+  "version": "1.0.0",
+  "dependencies": {
+    "neo4j-driver": "^5.28.1"
+  }
+}

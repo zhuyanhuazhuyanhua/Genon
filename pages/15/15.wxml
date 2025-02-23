@@ -1,0 +1,25 @@
+<button class="custom-button" bindtap="goToAnotherPage" style="width: 85rpx; display: block; box-sizing: border-box; left: 666rpx; top: 0rpx">搜索</button>
+<view class="container">
+  <block wx:for="{{depsVtabs}}" wx:key="index">
+    <view class="item">
+      <text class="name" wx:if="{{item['序号']}}">序号：{{item['序号']}}</text>
+      <text class="description" wx:if="{{item['主要树种 ']}}">主要树种：{{item['主要树种 ']}}</text>
+      <text class="description" >变异系数：{{item['变异系数']}}</text>
+      <text class="description">含碳率：{{item['含碳率']}}</text>
+      <text class="description">器官：{{item['器官']}}</text>
+      <text class="description">变异系数：{{item['变异系数']}}</text>
+      <text class="description" wx:if="{{item['备注']}}">备注：{{item['备注']}}</text>
+      <text class="description" wx:if="{{item['学位论文']}}">学位论文：{{item['学位论文']}}</text>
+      <text class="description">拉丁名：{{item['拉丁名']}}</text>
+      <text class="description" wx:if="{{item['数据来源']}}">数据来源：{{item['数据来源']}}</text>
+      <text class="description">文献题目：{{item['文献题目']}}</text>
+      <text class="description">时间：{{item['时间']}}</text>
+      <text class="description" wx:if="{{item['期刊']}}">期刊：{{item['期刊']}}</text>
+      <text class="description" wx:if="{{item['标准差']}}">标准差：{{item['标准差']}}</text>
+      <text class="description" wx:if="{{item['样地起源']}}">样地起源：{{item['样地起源']}}</text>
+      <text class="description">研究地点：{{item['研究地点']}}</text>
+      <text class="description">第一作者：{{item['第一作者']}}</text>
+      <text class="description" wx:if="{{item['通讯作者']}}">通讯作者：{{item['通讯作者']}}</text>
+    </view>
+  </block>
+</view>

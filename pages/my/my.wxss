@@ -1,0 +1,31 @@
+/* my.wxss */
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+.flower-list {
+    width: 100%;
+}
+
+.flower-item {
+
+    max-width: 45%;
+    height: 50px; /* 设置固定高度 */
+    line-height: 50px; /* 使文字垂直居中 */
+    text-align: center; /* 使文字水平居中 */
+    background-color: #c4eeba; /* 设置背景颜色 */
+    color: rgb(17, 167, 24);/* 设置文字颜色（应该是） */
+    border: 1px solid #ddd; /* 设置边框 */
+    margin-bottom: 5px; /* 设置按钮之间的间距 */
+  
+  
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse; /* 设置为垂直布局 */
+    border-radius: 30rpx;
+    box-shadow: 0 4px 6px rgba(36, 35, 35, 0.1);
+  
+}

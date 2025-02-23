@@ -1,0 +1,28 @@
+<view class="chat-container">
+  <!-- 聊天记录 -->
+  <scroll-view scroll-y class="chat-list">
+    <block wx:for="{{chatHistory}}" wx:key="index">
+      <view class="message {{item.role === 'user' ? 'user-message' : 'ai-message'}}">
+        <text>{{item.content}}</text>
+        <image wx:if="{{item.imageUrl}}" src="{{item.imageUrl}}" mode="aspectFit" style="width: 100%; height: auto;" />
+      </view>
+    </block>
+  </scroll-view>
+
+  <!-- 输入区域 -->
+  <view class="input-area">
+    <input 
+      class="message-input" 
+      value="{{inputMessage}}" 
+      bindinput="onInputChange"
+      placeholder="请输入您的问题"
+      disabled="{{isLoading}}"
+    />
+    <button 
+      class="send-button" 
+      bindtap="sendMessage" 
+      disabled="{{isLoading}}"
+      loading="{{isLoading}}" 
+    >发送</button>
+  </view>
+</view>

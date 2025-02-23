@@ -1,0 +1,46 @@
+
+
+
+<!-- wxml 文件 -->
+<view class="container" style="position: relative; left: 0rpx; top: -372rpx; height: 1750rpx; display: flex; box-sizing: border-box; width: 737rpx">
+
+
+<!-- pages/index/index.wxml -->
+<!-- pages/index/index.wxml -->
+<!-- pages/index/index.wxml -->
+<!-- pages/index/index.wxml -->
+<scroll-view class="scroll-view" scroll-x="true" bindscroll="onScroll" scroll-with-animation="false" scroll-into-view="{{'item' + currentIndex}}" style="height: 372rpx; display: block; box-sizing: border-box">
+  <view class="scroll-view-item" wx:for="{{imageList}}" wx:key="*this" wx:for-item="image" wx:for-index="index" id="item{{index}}">
+    <image src="{{image}}" mode="aspectFill" class="image-style" ></image>
+  </view>
+</scroll-view>
+<view class="two-button1">
+<button class="flower-ai-button" bindtap="goToAIHelper" >
+  <image src="/images/flowers-icon1.png" mode="widthFix" class="ai-image"/>
+  <text>花卉AI小助手</text>
+</button>
+<button class="tree-painter-button" bindtap="goToPainter">
+  <image src="/images/trees-icon1.png" mode="widthFix" class="painter-image"/>
+  <text>林木AI小助手</text>
+</button>
+</view>
+<view class="two-button2">
+<button class="mods-button" bindtap="goToMods"  style="position: relative; left: 339rpx; top: 0rpx">
+  <image src="/images/测试.png" mode="widthFix" class="mods-image"/>
+  <text>mods</text>
+</button>
+<button class="contact-button" bindtap="goToContact" style="position: relative; left: 339rpx; top: 0rpx; width: 289rpx; display: flex; box-sizing: border-box">
+  <image src="/images/联系我们.png" mode="widthFix" class="contact-image"/>
+  <text style="width: 222rpx; display: block; box-sizing: border-box">联系我们</text>
+</button>
+<button class="contact-button" bindtap="goTokg" style="position: relative; left: -339rpx; top: 220rpx">
+  <image src="/images/绿色教育.png" mode="widthFix" class="contact-image"/>
+  <text style="width: 229rpx; display: block; box-sizing: border-box">图谱计算</text>
+</button>
+<button class="contact-button" bindtap="goTomashang" style="position: relative; left: -339rpx; top: 220rpx">
+  <image src="/images/绿色教育-07.png" mode="widthFix" class="contact-image"/>
+  <text style="width: 222rpx; display: block; box-sizing: border-box">码上年鉴</text>
+</button>
+</view>
+
+</view>

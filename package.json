@@ -1,0 +1,6 @@
+{ "name": "my-cloud-project",
+  "version": "1.0.0",
+  "dependencies": {
+    "neo4j-driver": "^5.28.1"
+  }
+}

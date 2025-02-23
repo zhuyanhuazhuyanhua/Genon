@@ -1,0 +1,48 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+ 
+text {
+  font-size: 80rpx;
+  color: #3C5F81;
+}
+ 
+image {
+  width: 220rpx;
+}
+ 
+.detail {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+ 
+.bar {
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx 0;
+}
+ 
+.box {
+  width: 33.3%;
+  text-align: center;
+}
+
+/* picker 组件的样式 */
+.region-picker {
+  border: 1px solid rgb(20, 4, 4); /* 添加边框，颜色为浅灰色 */
+  border-radius: 5px; /* 添加圆角 */
+  padding: 10px; /* 内边距 */
+  background-color: #fff; /* 背景颜色 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+/* picker 内部的 view 样式 */
+.picker {
+  font-size: 16px; /* 字体大小 */
+  color: #333; /* 字体颜色 */
+}

@@ -1,0 +1,24 @@
+<view class="container">
+  <block wx:for="{{depsVtabs_filter}}" wx:key="index">
+    <view class="item">
+  <text class="name">序号：{{item['序号'] || ''}}</text>
+  <text class="description" wx:if="{{item['因变量']}}">因变量：{{item['因变量']}}</text>
+  <text class="description" wx:if="{{item['地区']}}">地区：{{item['地区']}}</text>
+  <text class="description" wx:if="{{item['数据来源']}}">数据来源：{{item['数据来源']}}</text>
+  <text class="description" wx:if="{{item['文献来源']}}">文献来源：{{item['文献来源']}}</text>
+  <text class="description" wx:if="{{item['林分']}}">林分：{{item['林分']}}</text>
+  <text class="description" wx:if="{{item['树龄']}}">树龄：{{item['树龄']}}</text>
+  <text class="description" wx:if="{{item['模型']}}">模型：{{item['模型']}}</text>
+  <text class="description" wx:if="{{item['自变量']}}">自变量：{{item['自变量']}}</text>
+  <text class="description" wx:if="{{item['自变量范围']}}">自变量范围：{{item['自变量范围']}}</text>
+  <text class="description" wx:if="{{item['蓄积量']}}">蓄积量：{{item['蓄积量']}}</text>
+</view>
+  </block>
+</view>
+<view class="container_message">
+  <input type="text" placeholder="请输入林分" bindinput="onInput" />
+  <button bindtap="search">搜索</button>
+  <view wx:for="{{depsVtabs_filter}}" wx:key="index">
+    <!--<text>{{item['林分']}}{{JSON.stringify(item)}}</text>-->
+  </view>
+</view>

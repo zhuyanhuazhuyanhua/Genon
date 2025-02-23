@@ -1,0 +1,4 @@
+<view style="text-align: center;">如果您遇到了问题，开发人员随时为您解惑</view>
+<view class="container">
+  <image src="/images/lianxi.jpg" mode="widthFix" class="contact-image"/>
+</view>

@@ -1,0 +1,46 @@
+<!-- index.wxml -->
+<view class="container">
+  <button class="login" bindtap="onLoginButtonTap">点击登录</button>
+  <view wx:if="{{showMessage}}">
+    <text>{{message}}</text>
+  </view>
+  <button class="share" open-type="share">分享好友</button>
+  <button class="btn" open-type="chooseAvatar" bindchooseavatar="choosePhoto">
+<image src="{{userphono}}" class="photo"/>
+</button>
+<input type="nickname" bindchange="onInput" class="{{inputClass}}"placeholder="请输入昵称" model:value="{{username}}"/>
+<button  open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">快速手机号</button>
+
+<!-- 在微信小程序的.wxml 文件中 -->
+<view class="button-container {{buttonHidden? 'hidden' : ''}}">
+  <button bindtap="onButtonClick">点击我并消失</button>
+</view>
+<button 
+      class="send-button" 
+      bindtap="sendChatMessage" 
+      disabled="false"
+      loading="false" 
+    >发送</button>
+</view>
+<!-- 不好用，开发文档说貌似这个api已经停止使用
+<view>当前用户名：{{name}}</view>
+<view bindtap='getUserName'></view>
+<view>{{userNickname}}</view> 
+getUserName: function () {
+  // 调用微信的接口，获取当前用户信息
+  wx.getUserInfo({
+    success: function (res) {
+      // 调用成功后触发
+      console.log('success', res);
+      // 将获取到的用户昵称存储到 data 中的 userNickname 变量
+      this.setData({
+        userNickname: res.userInfo.nickName
+      });
+    }.bind(this),
+    fail: function (res) {
+      // 调用失败后触发
+      console.log('fail', res);
+    }
+  })
+},
+-->

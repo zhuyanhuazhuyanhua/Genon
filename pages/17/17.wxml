@@ -1,0 +1,23 @@
+<button class="custom-button" bindtap="goToAnotherPage" style="width: 85rpx; display: block; box-sizing: border-box; left: 666rpx; top: 0rpx">搜索</button>
+
+  <!-- 按钮组件 -->
+<view class="container">
+  <block wx:for="{{depsVtabs}}" wx:key="index">
+    <view class="item">
+      <text class="name">序号：{{item['序号']}}</text>
+      <text class="description">主要树种：{{item['主要树种 ']}}</text>
+      <text class="description">作者：{{item['作者']}}</text>
+      <text class="description">因变量{{item['因变量']}}</text>
+      <text class="description">拉丁名：{{item['拉丁名']}}</text>
+      <text class="description">数据来源：{{item['数据来源']}}</text>
+      <text class="description">文献题目：{{item['文献题目']}}</text>
+      <text class="description">时间：{{item['时间']}}</text>
+      <text class="description">期刊：{{item['期刊']}}</text>
+      <text class="description">样地起源：{{item['样地起源']}}</text>
+      <text class="description" wx:if="{{item['样木株数']}}">样木株数：{{item['样木株数']}}</text>
+      <text class="description">模型表达式：{{item['模型表达式']}}</text>
+      <text class="description">研究地点：{{item['研究地点']}}</text>
+      <text class="description">自变量：{{item['自变量']}}</text>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,9 @@
+<view class="container">
+    <scroll-view scroll-y class="flower-list">
+        <block wx:for="{{flowers}}" wx:key="index">
+            <button class="flower-item" bindtap="onFlowerTap" data-index="{{index}}" style="position: relative; left: 0rpx; top: 0rpx">
+                {{item}}
+            </button>
+        </block>
+    </scroll-view>
+</view>

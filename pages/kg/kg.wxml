@@ -1,0 +1,10 @@
+<!-- pages/kg/kg.wxml -->
+<view class="container">
+  <button bindtap="calculateSimilarity">计算相似度</button>
+  <view wx:if="{{similarityResult !== null}}">
+    <text>相似度结果: {{similarityResult}}</text>
+  </view>
+  <view wx:else>
+    <text>暂无相似度结果</text>
+  </view>
+</view>

@@ -1,0 +1,13 @@
+{
+  "name": "caltimate_neibor",
+  "version": "1.0.0",
+  
+  "description": "A WeChat Cloud Function to calculate similarity between two nodes using Neo4j",
+  "main": "index.js",  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "neo4j-driver": "^5.28.1" 
+  }
+}

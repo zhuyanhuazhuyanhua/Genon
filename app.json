@@ -1,0 +1,103 @@
+{
+  "entryPagePath": "pages/mine/mine",
+  "pages": [
+    "pages/mods2/mods2",
+    "pages/index/index",
+    "pages/contact/contact",
+    "pages/my/my",
+    "pages/wool/wool",
+    "pages/ai-helper/ai-helper",
+    "pages/ai-painter/ai-painter",
+    "pages/1/1",
+    "pages/1kg/1kg",
+    "pages/2/2",
+    "pages/2kg/2kg",
+    "pages/3/3",
+    "pages/3kg/3kg",
+    "pages/4/4",
+    "pages/4kg/4kg",
+    "pages/5/5",
+    "pages/5kg/5kg",
+    "pages/6/6",
+    "pages/6kg/6kg",
+    "pages/7/7",
+    "pages/7kg/7kg",
+    "pages/8/8",
+    "pages/8kg/8kg",
+    "pages/9/9",
+    "pages/9kg/9kg",
+    "pages/10/10",
+    "pages/10kg/10kg",
+    "pages/11/11",
+    "pages/11kg/11kg",
+    "pages/12/12",
+    "pages/12kg/12kg",
+    "pages/13/13",
+    "pages/14/14",
+    "pages/14kg/14kg",
+    "pages/15/15",
+    "pages/15kg/15kg",
+    "pages/16/16",
+    "pages/16kg/16kg",
+    "pages/17/17",
+    "pages/17kg/17kg",
+    "pages/mods/mods",
+    "pages/mine/mine",
+    "pages/kg/kg",
+    "pages/mashang/mashang",
+    "pages/tianqi/tianqi",
+    "pages/star/star"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "/images/环保1.png",
+        "selectedIconPath": "/images/环保.png"
+      },
+
+      {
+        "pagePath": "pages/my/my",
+        "text": "百花谱",
+        "iconPath": "/images/低碳环保1.png",
+        "selectedIconPath": "/images/低碳环保.png"
+      },
+      {
+        "pagePath": "pages/wool/wool",
+        "text": "林木鉴",
+        "iconPath": "/images/植物1.png",
+        "selectedIconPath": "/images/植物.png"
+       },
+       {
+        "pagePath": "pages/tianqi/tianqi",
+        "text": "天气",
+        "iconPath": "/images/多云 (2).png",
+        "selectedIconPath": "/images/多云.png"
+      },
+
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/images/节能1.png",
+        "selectedIconPath": "/images/节能.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#228B22",
+    "navigationBarTitleText": "神农在线-Genonwiki",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#FFFFE0"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "requiredPrivateInfos": ["getLocation"],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="header">
+    <button class="btn" open-type="chooseAvatar" bindchooseavatar="choosePhoto">
+      <image src="{{userphono}}" class="photo" />
+    </button>
+    <view>
+      <input type="nickname" bindchange="onInput" class="{{inputClass}}" placeholder="请输入昵称" model:value="{{username}}" />
+      <view class="phoneNumber">{{phoneNumber}}</view>
+    </view>
+  </view>
+
+  <view class="button-container {{buttonHidden? 'hidden' : ''}}">
+    <button bindtap="onButtonClick" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">快捷登录</button>
+  </view>
+
+  <view class="menu">
+    <navigator url="/pages/orders/orders" class="menu-item">
+      <image src="/images/我的订单.png" class="icon"></image>
+      <text>我的订单</text>
+    </navigator>
+    <navigator url="/pages/star/star" class="menu-item">
+      <image src="/images/我的收藏.png" class="icon"></image>
+      <text>我的收藏</text>
+    </navigator>
+    <navigator url="/pages/settings/settings" class="menu-item">
+      <image src="/images/配置设置.png" class="icon"></image>
+      <text>设置</text>
+    </navigator>
+    <navigator url="/pages/contact/contact" class="menu-item">
+      <image src="/images/反馈.png" class="icon"></image>
+      <text>反馈</text>
+    </navigator>
+  </view>
+</view>

@@ -1,0 +1,134 @@
+/* wxss 文件 */
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgb(229, 235, 227);
+
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #333;
+}
+.two-button1{
+  margin-top:80rpx;
+  display: flex; /* 使用 flex 布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  padding-right: 0rpx; 
+  gap: 50rpx;
+}
+.two-button2{
+  margin-top:80rpx;
+  display: flex; /* 使用 flex 布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  padding-right: 0rpx; 
+  gap: 50rpx;
+}
+.flower-ai-button {
+  max-width: 290rpx;/*注====使用max-width才能避免自适应改变大小*/
+  height: 200rpx;
+  background: #f0f3f0;
+  color: rgb(17, 167, 24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* 设置为垂直布局 */
+  border-radius: 30rpx;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+.ai-image {
+  margin-bottom: 10px; /* 为图片添加下外边距，使文字和图片有一定间隔 */
+  width: 100rpx; /* 设置图片的宽度 */
+  height: 100rpx; /* 设置图片的高度 */
+}
+.tree-painter-button{
+  max-width: 290rpx;
+  height: 200rpx;
+  background: #f0f3f0;
+  color: rgb(17, 167, 24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* 设置为垂直布局 */
+  border-radius: 30rpx;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.painter-image {
+  margin-bottom: 10px; /* 为图片添加下外边距，使文字和图片有一定间隔 */
+  width: 100rpx; /* 设置图片的宽度 */
+  height: 100rpx; /* 设置图片的高度 */
+}
+
+
+.button-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+.mods-button{
+
+  max-width: 290rpx;
+  height: 120rpx;
+  background: #f0f3f0;
+  color: rgb(17, 167, 24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row; /* 设置为垂直布局 */
+  border-radius: 30rpx;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.mods-image {
+  margin-bottom: 0px; /* 为图片添加下外边距，使文字和图片有一定间隔 */
+  width: 100rpx; /* 设置图片的宽度 */
+  height: 100rpx; /* 设置图片的高度 */
+}
+.contact-button{
+
+  max-width: 290rpx;
+  height: 120rpx;
+  background: #f0f3f0;
+  color: rgb(17, 167, 24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row; /* 设置为垂直布局 */
+  border-radius: 30rpx;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.contact-image {
+  margin-bottom: 0px; /* 为图片添加下外边距，使文字和图片有一定间隔 */
+  width: 100rpx; /* 设置图片的宽度 */
+  height: 100rpx; /* 设置图片的高度 */
+}
+/* pages/index/index.wxss */
+.scroll-view {
+  white-space: nowrap;
+  width: 100%;
+  overflow-x: auto;
+  
+}
+
+.scroll-view-item {
+  display: inline-block;
+  width: 100%; /* 设置每个item的宽度为100% */
+  height: 100%; /* 根据需要调整高度 */
+}
+
+.scroll-view-item image.image-style {
+  width: 100%; /* 图片宽度设置为100% */
+  height: 100%; /* 图片高度设置为100% */
+  border-radius: 30rpx!important; /* 四周圆角半径，可根据需要调整值，使用!important 提高优先级 */
+  display: inline-block;
+  box-sizing: border-box;
+  /* 从内联样式中移过来的样式 */
+}
