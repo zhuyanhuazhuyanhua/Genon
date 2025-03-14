@@ -1,0 +1,16 @@
+<view class="container" style="height: 1449rpx; display: block; box-sizing: border-box">
+  <view class="input-group" style="height: 147rpx; display: block; box-sizing: border-box">
+    <text>选择周序号：</text>
+    <input class="input-style" style="height: 60rpx; display: block; box-sizing: border-box" type="text" placeholder="请输入周序号" bindinput="onUsernameInput" />
+  </view>
+  <view class="input-group" style="height: 147rpx; display: block; box-sizing: border-box">
+    <text>组长学号：</text>
+    <input class="input-style" style="height: 60rpx; display: block; box-sizing: border-box" type="text" placeholder="请输入组长学号" bindinput="onPasswordInput" />
+  </view>
+  <view class="input-group">
+    <text>确认组长学号：</text>
+    <input class="input-style" style="height: 77rpx; display: block; box-sizing: border-box" type="text" placeholder="请再次输入组长学号" bindinput="onrePasswordInput" />
+  </view>
+  
+  <button bindtap="register" class="button-style" style="position: relative; left: 0rpx; top: 418rpx" >提交</button>
+</view>

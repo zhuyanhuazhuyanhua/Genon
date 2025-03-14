@@ -1,1 +1,57 @@
 /* pages/kg/kg.wxss */
+/* pages/kg/kg.wxss */
+/* 页面整体样式 */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* 输入框样式 */
+  input {
+    width: 80%;
+    height: 40px;
+    margin: 10px 0;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+  }
+  
+  /* 输入框聚焦时高亮 */
+  input:focus {
+    border-color: #007aff;
+    box-shadow: 0 0 5px rgba(0, 122, 255, 0.5);
+  }
+  
+  /* 按钮样式 */
+  button {
+    width: 80%;
+    height: 45px;
+    margin: 20px 0;
+    background-color: #007aff;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    transition: background-color 0.3s;
+  }
+  
+  /* 按钮点击时的效果 */
+  button:active {
+    background-color: #005ecb;
+  }
+  
+  /* 相似度结果文本 */
+  text {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #333;
+  }
+  

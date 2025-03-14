@@ -1,6 +1,10 @@
 <!-- pages/kg/kg.wxml -->
 <view class="container">
+  <input placeholder="请输入第一个节点名称" bindinput="onInputChange" data-field="name1"/>
+  <input placeholder="请输入第二个节点名称" bindinput="onInputChange" data-field="name2"/>
+  
   <button bindtap="calculateSimilarity">计算相似度</button>
+
   <view wx:if="{{similarityResult !== null}}">
     <text>相似度结果: {{similarityResult}}</text>
   </view>

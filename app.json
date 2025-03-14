@@ -1,9 +1,9 @@
 {
-  "entryPagePath": "pages/mine/mine",
+  "entryPagePath": "pages/go_login/go_login",
   "pages": [
     "pages/mods2/mods2",
     "pages/index/index",
-    "pages/contact/contact",
+  
     "pages/my/my",
     "pages/wool/wool",
     "pages/ai-helper/ai-helper",
@@ -46,7 +46,10 @@
     "pages/kg/kg",
     "pages/mashang/mashang",
     "pages/tianqi/tianqi",
-    "pages/star/star"
+    "pages/star/star",
+    "pages/go_login/go_login",
+    "pages/register/register",
+    "pages/openmv/openmv"
   ],
   "tabBar": {
     "list": [

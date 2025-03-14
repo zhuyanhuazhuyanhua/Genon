@@ -60,9 +60,9 @@ Page({
     });
   },
   goToContact() {
-    console.log('Navigating to Contact');//注=====wx.redirectTo跳转之后会删除上一级页面，navigateTo只有10层
+    console.log('Navigating to openmv');//注=====wx.redirectTo跳转之后会删除上一级页面，navigateTo只有10层
     wx.navigateTo({
-      url: '/pages/contact/contact'
+      url: '/pages/openmv/openmv'
     });
   },
   goTomashang() {

@@ -1,0 +1,12 @@
+<view class="container" style="height: 1445rpx; display: block; box-sizing: border-box">
+  <view class="input-group" style="height: 237rpx; display: block; box-sizing: border-box">
+    <text>用户名：</text>
+    <input style="height: 58rpx; display: block; box-sizing: border-box" type="text" placeholder="请输入用户名" bindinput="onUsernameInput" class="input-style" />
+  </view>
+  <view class="input-group">
+    <text>密码：</text>
+    <input style="height: 60rpx; display: block; box-sizing: border-box" type="password" placeholder="请输入密码" bindinput="onPasswordInput" class="input-style" />
+  </view>
+  <button bindtap="login" class="button-style" style="position: relative; left: 0rpx; top: 224rpx">登录</button>
+  <button bindtap="register" class="button-style" style="position: relative; left: 0rpx; top: 452rpx">提交</button>
+</view>

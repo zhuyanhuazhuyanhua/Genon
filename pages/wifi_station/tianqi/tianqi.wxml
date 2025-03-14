@@ -1,0 +1,4 @@
+<canvas class = "canvas1" id="chart1"
+canvas-id="humidity" disable-scroll="true" bindtouchstart="touchHandler" bindtouchmove="moveHandler" bindtouchend="touchEndHandler"></canvas>
+<canvas class = "canvas2" id="chart2"
+canvas-id="tempe"></canvas>

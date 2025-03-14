@@ -12,6 +12,11 @@ Page({
   onLoad() {
     // this.getUserInfo();
   },
+  onButtonClick1: function() {//快捷登录
+    wx.navigateTo({
+      url: '/pages/go_login/go_login'
+    });
+  },
   onButtonClick: function() {//快捷登录
     this.setData({
       buttonHidden: true

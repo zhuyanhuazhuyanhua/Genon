@@ -1,4 +1,4 @@
-// pages/contact/contact.js
+// pages/openmv/openmv.js
 Page({
 
   /**

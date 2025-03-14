@@ -31,7 +31,7 @@
 </button>
 <button class="contact-button" bindtap="goToContact" style="position: relative; left: 339rpx; top: 0rpx; width: 289rpx; display: flex; box-sizing: border-box">
   <image src="/images/联系我们.png" mode="widthFix" class="contact-image"/>
-  <text style="width: 222rpx; display: block; box-sizing: border-box">联系我们</text>
+  <text style="width: 222rpx; display: block; box-sizing: border-box">天眼在线</text>
 </button>
 <button class="contact-button" bindtap="goTokg" style="position: relative; left: -339rpx; top: 220rpx">
   <image src="/images/绿色教育.png" mode="widthFix" class="contact-image"/>

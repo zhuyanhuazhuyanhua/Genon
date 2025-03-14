@@ -10,7 +10,10 @@
   </view>
 
   <view class="button-container {{buttonHidden? 'hidden' : ''}}">
-    <button bindtap="onButtonClick" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">快捷登录</button>
+    <button bindtap="onButtonClick" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" style="position: relative; left: -189rpx; top: 8rpx; width: 335rpx; display: block; box-sizing: border-box">获取手机号</button>
+  </view>
+  <view class="button-container {{buttonHidden? 'hidden' : ''}}" style="height: 2rpx; display: flex; box-sizing: border-box">
+    <button bindtap="onButtonClick1"  style="position: relative; left: 179rpx; top: -51rpx">快捷登录</button>
   </view>
 
   <view class="menu">
