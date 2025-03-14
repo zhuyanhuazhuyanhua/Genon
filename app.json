@@ -49,7 +49,8 @@
     "pages/star/star",
     "pages/go_login/go_login",
     "pages/register/register",
-    "pages/openmv/openmv"
+    "pages/openmv/openmv",
+    "pages/wifi_station/tianqi/tianqi"
   ],
   "tabBar": {
     "list": [
