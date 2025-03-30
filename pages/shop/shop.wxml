@@ -1,0 +1,113 @@
+<!--pages/shop.wxml-->
+<!-- 页面容器 -->
+<view class="container">
+  <!-- 搜索栏 -->
+  <view class="search-bar">
+    <input 
+      type="text" 
+      placeholder="搜索商品" 
+      value="{{searchValue}}" 
+      bindinput="onSearch"
+      class="search-input"
+    />
+  </view>
+
+  <!-- 分类列表 -->
+  <scroll-view class="categories" scroll-x="true">
+    <view 
+      class="category-item {{item.id === currentCategory ? 'active' : ''}}" 
+      wx:for="{{categories}}" 
+      wx:key="id"
+      bindtap="switchCategory"
+      data-id="{{item.id}}"
+    >
+      {{item.name}}
+    </view>
+  </scroll-view>
+
+  <!-- 商品列表 -->
+  <scroll-view class="goods-list" scroll-y="true" bindscrolltolower="onScrollToLower">
+    <view 
+      class="goods-item"
+      wx:for="{{goodsList}}"
+      wx:key="id"
+      wx:if="{{!isSearching || (isSearching && item.name.indexOf(searchValue) !== -1)}}"
+    >
+      <!-- 商品图片 -->
+      <image class="goods-image" src="{{item.image}}" mode="aspectFill"/>
+      
+      <!-- 商品信息 -->
+      <view class="goods-info">
+        <text class="goods-name">{{item.name}}</text>
+        <text class="goods-desc">{{item.description}}</text>
+        <view class="goods-bottom">
+          <text class="goods-price">¥{{item.price}}</text>
+          <button 
+            class="add-to-cart" 
+            size="mini" 
+            bindtap="addToCart"
+            data-id="{{item.id}}"
+          >加入购物车</button>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- 分页控制 -->
+  <view class="pagination">
+    <button 
+      class="page-btn"
+      disabled="{{currentPage <= 1 || isLoading}}"
+      bindtap="prevPage"
+    >上一页</button>
+    <text class="page-info">第{{currentPage}}页</text>
+    <button 
+      class="page-btn"
+      disabled="{{!hasMore || isLoading}}"
+      bindtap="nextPage"
+    >下一页</button>
+  </view>
+
+  <!-- 购物车按钮 -->
+  <view class="cart-button" bindtap="viewCart">
+    <text class="cart-text">购物车</text>
+    <text class="cart-total">¥{{cartTotal}}</text>
+  </view>
+
+  <!-- 购物车弹窗 -->
+  <view class="cart-popup {{showCartPopup ? 'show' : ''}}">
+    <view class="cart-popup-mask" bindtap="closeCartPopup"></view>
+    <view class="cart-popup-content">
+      <view class="cart-popup-header">
+        <text class="cart-popup-title">购物车</text>
+        <text class="cart-popup-close" bindtap="closeCartPopup">×</text>
+      </view>
+      <scroll-view class="cart-items" scroll-y>
+        <block wx:if="{{cartItems.length > 0}}">
+          <view class="cart-item" wx:for="{{cartItems}}" wx:key="id">
+            <image class="cart-item-image" src="{{item.image}}" mode="aspectFill"/>
+            <view class="cart-item-info">
+              <text class="cart-item-name">{{item.name}}</text>
+              <text class="cart-item-price">¥{{item.price}}</text>
+              <view class="cart-item-quantity">
+                <text class="quantity-btn" bindtap="decreaseQuantity" data-id="{{item.id}}">-</text>
+                <text class="quantity-number">{{item.quantity}}</text>
+                <text class="quantity-btn" bindtap="increaseQuantity" data-id="{{item.id}}">+</text>
+              </view>
+            </view>
+          </view>
+        </block>
+        <view wx:else class="cart-empty">
+          <text>购物车是空的</text>
+        </view>
+      </scroll-view>
+      <view class="cart-popup-footer">
+        <view class="cart-total-info">
+          <text>总计：</text>
+          <text class="cart-popup-total">¥{{cartTotal}}</text>
+        </view>
+        <button class="checkout-btn" bindtap="checkout">结算</button>
+      </view>
+    </view>
+  </view>
+</view>

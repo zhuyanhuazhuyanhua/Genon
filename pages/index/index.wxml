@@ -16,29 +16,29 @@
 </scroll-view>
 <view class="two-button1">
 <button class="flower-ai-button" bindtap="goToAIHelper" >
-  <image src="/images/flowers-icon1.png" mode="widthFix" class="ai-image"/>
+  <image src="cloud://gen-6g41ip5beb54cfa4.6765-gen-6g41ip5beb54cfa4-1344129462/images/flowers-icon1.png" mode="widthFix" class="ai-image"/>
   <text>花卉AI小助手</text>
 </button>
 <button class="tree-painter-button" bindtap="goToPainter">
-  <image src="/images/trees-icon1.png" mode="widthFix" class="painter-image"/>
+  <image src="cloud://gen-6g41ip5beb54cfa4.6765-gen-6g41ip5beb54cfa4-1344129462/images/trees-icon1.png" mode="widthFix" class="painter-image"/>
   <text>林木AI小助手</text>
 </button>
 </view>
 <view class="two-button2">
 <button class="mods-button" bindtap="goToMods"  style="position: relative; left: 339rpx; top: 0rpx">
-  <image src="/images/测试.png" mode="widthFix" class="mods-image"/>
+  <image src="cloud://gen-6g41ip5beb54cfa4.6765-gen-6g41ip5beb54cfa4-1344129462/images/测试.png" mode="widthFix" class="mods-image"/>
   <text>mods</text>
 </button>
 <button class="contact-button" bindtap="goToContact" style="position: relative; left: 339rpx; top: 0rpx; width: 289rpx; display: flex; box-sizing: border-box">
-  <image src="/images/联系我们.png" mode="widthFix" class="contact-image"/>
+  <image src="cloud://gen-6g41ip5beb54cfa4.6765-gen-6g41ip5beb54cfa4-1344129462/images/联系我们.png" mode="widthFix" class="contact-image"/>
   <text style="width: 222rpx; display: block; box-sizing: border-box">天眼在线</text>
 </button>
 <button class="contact-button" bindtap="goTokg" style="position: relative; left: -339rpx; top: 220rpx">
-  <image src="/images/绿色教育.png" mode="widthFix" class="contact-image"/>
+  <image src="cloud://gen-6g41ip5beb54cfa4.6765-gen-6g41ip5beb54cfa4-1344129462/images/绿色教育.png" mode="widthFix" class="contact-image"/>
   <text style="width: 229rpx; display: block; box-sizing: border-box">图谱计算</text>
 </button>
 <button class="contact-button" bindtap="goTomashang" style="position: relative; left: -339rpx; top: 220rpx">
-  <image src="/images/绿色教育-07.png" mode="widthFix" class="contact-image"/>
+  <image src="cloud://gen-6g41ip5beb54cfa4.6765-gen-6g41ip5beb54cfa4-1344129462/images/绿色教育-07.png" mode="widthFix" class="contact-image"/>
   <text style="width: 222rpx; display: block; box-sizing: border-box">码上年鉴</text>
 </button>
 </view>

@@ -7,9 +7,9 @@
  
   <text>{{now.temp}}°C {{now.text}}</text>
   
-  <image 
+<image 
   wx:if="{{now.icon}}" 
-  src='/images/hefenicon/{{now.icon}}{{isDay ? "d" : "n"}}.png' 
+  src="{{'/images/hefenicon/' + now.icon + (isDay ? 'd' : 'n') + '.png'}}"
   mode='aspectFit'
 ></image>
 

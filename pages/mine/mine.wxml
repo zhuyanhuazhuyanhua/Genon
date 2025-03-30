@@ -17,20 +17,20 @@
   </view>
 
   <view class="menu">
-    <navigator url="/pages/orders/orders" class="menu-item">
-      <image src="/images/我的订单.png" class="icon"></image>
-      <text>我的订单</text>
+    <navigator url="/pages/shop/shop" class="menu-item">
+      <image src="cloud://gen-6g41ip5beb54cfa4.6765-gen-6g41ip5beb54cfa4-1344129462/images/我的订单.png" class="icon"></image>
+      <text>我的商城</text>
     </navigator>
     <navigator url="/pages/star/star" class="menu-item">
-      <image src="/images/我的收藏.png" class="icon"></image>
+      <image src="cloud://gen-6g41ip5beb54cfa4.6765-gen-6g41ip5beb54cfa4-1344129462/images/我的收藏.png" class="icon"></image>
       <text>我的收藏</text>
     </navigator>
     <navigator url="/pages/settings/settings" class="menu-item">
-      <image src="/images/配置设置.png" class="icon"></image>
+      <image src="cloud://gen-6g41ip5beb54cfa4.6765-gen-6g41ip5beb54cfa4-1344129462/images/配置设置.png" class="icon"></image>
       <text>设置</text>
     </navigator>
     <navigator url="/pages/contact/contact" class="menu-item">
-      <image src="/images/反馈.png" class="icon"></image>
+      <image src="cloud://gen-6g41ip5beb54cfa4.6765-gen-6g41ip5beb54cfa4-1344129462/images/反馈.png" class="icon"></image>
       <text>反馈</text>
     </navigator>
   </view>

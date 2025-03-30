@@ -25,7 +25,7 @@ Page({
       // 写入文件
       fs.writeFile({
           filePath: filePath,
-          data: '碳排放数据\n蓄积量-生物量\n含碳率\n单木生长模型\n林分生长模型', // 示例数据
+          data: '碳排放数据\n蓄积量-生物量\n含碳率\n单木生长模型\n林分生长模型\n水质状况表', // 示例数据
           encoding: 'utf8',
           success: () => {
               console.log('文件写入成功');
@@ -62,7 +62,7 @@ Page({
       console.log(`你点击了第 ${index + 13} 个花卉: ${flower}`);
       // 在这里可以添加更多的逻辑，例如跳转到花卉详情页面等
       wx.navigateTo({
-        url: `/pages/${index + 13}/${index + 13}`
+        url: `/packageB/pages/${index + 13}/${index + 13}`
     });
   }
 });

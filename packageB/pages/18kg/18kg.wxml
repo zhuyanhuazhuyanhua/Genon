@@ -1,0 +1,147 @@
+<view class="container">
+  <block wx:for="{{depsVtabs_filter}}" wx:key="index">
+    <view class="item" >
+      <view class="header" bindtap="toggleExpand" data-index="{{index}}" style="height: 50rpx; display: block; box-sizing: border-box">
+        <text class="name">水系河段：{{item['水系'] + ' ' + item['河流（河段）']}}</text>
+        <text class="expand-icon" style="position: relative; left: 570rpx; top: -45rpx">{{expanded[index] ? '收起' : '展开'}}</text>
+      </view>
+      <view class="content" hidden="{{!expanded[index]}}">
+        
+        <text class="description">所在区县：{{item['所在区县']}}</text>
+        <text class="description">质类别：{{item['质类别']}}</text>
+        <text class="description">适用范围：{{item['适用范围']}}</text>
+        <text class="description">2007年3月：{{item['07.03']}}</text>
+        <text class="description">2007年12月：{{item['07.12']}}</text>
+        <text class="description">2008年8月：{{item['08.08']}}</text>
+        <text class="description">2009年8月：{{item['09.08']}}</text>
+        <text class="description">2009年12月：{{item['09.12']}}</text>
+        <text class="description">2010年1月：{{item['10.01']}}</text>
+        <text class="description">2010年12月：{{item['10.12']}}</text>
+        <text class="description">2015年1月：{{item['15.01']}}</text>
+        <text class="description">2015年2月：{{item['15.02']}}</text>
+        <text class="description">2015年3月：{{item['15.03']}}</text>
+        <text class="description">2015年4月：{{item['15.04']}}</text>
+        <text class="description">2015年5月：{{item['15.05']}}</text>
+        <text class="description">2015年10月：{{item['15.10']}}</text>
+        <text class="description">2015年11月：{{item['15.11']}}</text>
+        <text class="description">2016年1月：{{item['16.01']}}</text>
+<text class="description">2016年2月：{{item['16.02']}}</text>
+<text class="description">2016年3月：{{item['16.03']}}</text>
+<text class="description">2016年4月：{{item['16.04']}}</text>
+<text class="description">2016年5月：{{item['16.05']}}</text>
+<text class="description">2016年6月：{{item['16.06']}}</text>
+<text class="description">2016年7月：{{item['16.07']}}</text>
+<text class="description">2016年8月：{{item['16.08']}}</text>
+<text class="description">2016年9月：{{item['16.09']}}</text>
+<text class="description">2016年10月：{{item['16.10']}}</text>
+<text class="description">2016年11月：{{item['16.11']}}</text>
+<text class="description">2016年12月：{{item['16.12']}}</text>
+<text class="description">2017年1月：{{item['17.01']}}</text>
+<text class="description">2017年2月：{{item['17.02']}}</text>
+<text class="description">2017年3月：{{item['17.03']}}</text>
+<text class="description">2017年4月：{{item['17.04']}}</text>
+<text class="description">2017年5月：{{item['17.05']}}</text>
+<text class="description">2017年6月：{{item['17.06']}}</text>
+<text class="description">2017年7月：{{item['17.07']}}</text>
+<text class="description">2017年8月：{{item['17.08']}}</text>
+<text class="description">2017年9月：{{item['17.09']}}</text>
+<text class="description">2017年10月：{{item['17.10']}}</text>
+<text class="description">2017年11月：{{item['17.11']}}</text>
+<text class="description">2017年12月：{{item['17.12']}}</text>
+<text class="description">2018年1月：{{item['18.01']}}</text>
+<text class="description">2018年2月：{{item['18.02']}}</text>
+<text class="description">2018年3月：{{item['18.03']}}</text>
+<text class="description">2018年4月：{{item['18.04']}}</text>
+<text class="description">2018年5月：{{item['18.05']}}</text>
+<text class="description">2018年6月：{{item['18.06']}}</text>
+<text class="description">2018年7月：{{item['18.07']}}</text>
+<text class="description">2018年8月：{{item['18.08']}}</text>
+<text class="description">2018年9月：{{item['18.09']}}</text>
+<text class="description">2018年10月：{{item['18.10']}}</text>
+<text class="description">2018年11月：{{item['18.11']}}</text>
+<text class="description">2018年12月：{{item['18.12']}}</text>
+<text class="description">2019年1月：{{item['19.01']}}</text>
+<text class="description">2019年2月：{{item['19.02']}}</text>
+<text class="description">2019年3月：{{item['19.03']}}</text>
+<text class="description">2019年4月：{{item['19.04']}}</text>
+<text class="description">2019年5月：{{item['19.05']}}</text>
+<text class="description">2019年6月：{{item['19.06']}}</text>
+<text class="description">2019年7月：{{item['19.07']}}</text>
+<text class="description">2019年8月：{{item['19.08']}}</text>
+<text class="description">2019年9月：{{item['19.09']}}</text>
+<text class="description">2019年10月：{{item['19.10']}}</text>
+<text class="description">2019年11月：{{item['19.11']}}</text>
+<text class="description">2019年12月：{{item['19.12']}}</text>
+<text class="description">2020年1月：{{item['20.01']}}</text>
+<text class="description">2020年2月：{{item['20.02']}}</text>
+<text class="description">2020年3月：{{item['20.03']}}</text>
+<text class="description">2020年4月：{{item['20.04']}}</text>
+<text class="description">2020年5月：{{item['20.05']}}</text>
+<text class="description">2020年6月：{{item['20.06']}}</text>
+<text class="description">2020年7月：{{item['20.07']}}</text>
+<text class="description">2020年8月：{{item['20.08']}}</text>
+<text class="description">2020年9月：{{item['20.09']}}</text>
+<text class="description">2020年10月：{{item['20.10']}}</text>
+<text class="description">2020年11月：{{item['20.11']}}</text>
+<text class="description">2020年12月：{{item['20.12']}}</text>
+<text class="description">2021年1月：{{item['21.01']}}</text>
+<text class="description">2021年2月：{{item['21.02']}}</text>
+<text class="description">2021年3月：{{item['21.03']}}</text>
+<text class="description">2021年4月：{{item['21.04']}}</text>
+<text class="description">2021年5月：{{item['21.05']}}</text>
+<text class="description">2021年6月：{{item['21.06']}}</text>
+<text class="description">2021年7月：{{item['21.07']}}</text>
+<text class="description">2021年8月：{{item['21.08']}}</text>
+<text class="description">2021年9月：{{item['21.09']}}</text>
+<text class="description">2021年10月：{{item['21.10']}}</text>
+<text class="description">2021年11月：{{item['21.11']}}</text>
+<text class="description">2021年12月：{{item['21.12']}}</text>
+<text class="description">2022年1月：{{item['22.01']}}</text>
+<text class="description">2022年2月：{{item['22.02']}}</text>
+<text class="description">2022年3月：{{item['22.03']}}</text>
+<text class="description">2022年4月：{{item['22.04']}}</text>
+<text class="description">2022年5月：{{item['22.05']}}</text>
+<text class="description">2022年6月：{{item['22.06']}}</text>
+<text class="description">2022年7月：{{item['22.07']}}</text>
+<text class="description">2022年8月：{{item['22.08']}}</text>
+<text class="description">2022年9月：{{item['22.09']}}</text>
+<text class="description">2022年10月：{{item['22.10']}}</text>
+<text class="description">2022年11月：{{item['22.11']}}</text>
+<text class="description">2022年12月：{{item['22.12']}}</text>
+<text class="description">2023年1月：{{item['23.01']}}</text>
+<text class="description">2023年2月：{{item['23.02']}}</text>
+<text class="description">2023年3月：{{item['23.03']}}</text>
+<text class="description">2023年4月：{{item['23.04']}}</text>
+<text class="description">2023年5月：{{item['23.05']}}</text>
+<text class="description">2023年6月：{{item['23.06']}}</text>
+<text class="description">2023年7月：{{item['23.07']}}</text>
+<text class="description">2023年7月：{{item['23.07']}}</text>
+<text class="description">2023年8月：{{item['23.08']}}</text>
+<text class="description">2023年9月：{{item['23.09']}}</text>
+<text class="description">2023年10月：{{item['23.10']}}</text>
+<text class="description">2023年11月：{{item['23.11']}}</text>
+<text class="description">2023年12月：{{item['23.12']}}</text>
+<text class="description">2024年1月：{{item['24.01']}}</text>
+<text class="description">2024年2月：{{item['24.02']}}</text>
+<text class="description">2024年3月：{{item['24.03']}}</text>
+<text class="description">2024年4月：{{item['24.04']}}</text>
+<text class="description">2024年5月：{{item['24.05']}}</text>
+<text class="description">2024年6月：{{item['24.06']}}</text>
+<text class="description">2024年7月：{{item['24.07']}}</text>
+<text class="description">2024年8月：{{item['24.08']}}</text>
+<text class="description">2024年9月：{{item['24.09']}}</text>
+<text class="description">2024年10月：{{item['24.10']}}</text>
+<text class="description">2024年11月：{{item['24.11']}}</text>
+<text class="description">2024年12月：{{item['24.12']}}</text>
+<text class="description">2025年1月：{{item['25.01']}}</text>
+      </view>
+    </view>
+  </block>
+</view>
+<view class="container_message">
+  <input type="text" placeholder="请输入河流河段" bindinput="onInput" />
+  <button bindtap="search">搜索</button>
+  <view wx:for="{{depsVtabs_filter}}" wx:key="index">
+    <!--<text>{{item['主要树种']}}: {{JSON.stringify(item)}}</text>-->
+  </view>
+</view>

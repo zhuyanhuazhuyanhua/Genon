@@ -32,7 +32,7 @@ Page({
   
       // 调用云函数
       wx.cloud.callFunction({
-        name: 'try1', // 云函数名称
+        name: 'try2', // 云函数名称
         data: { name1, name2 }, // 传入用户输入的节点名称
         success: (res) => {
           console.log('云函数调用成功:', res.result);

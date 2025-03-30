@@ -2,7 +2,7 @@ App({
   onLaunch() {
       //默认开启调试
     wx.setEnableDebug({
-        enableDebug: true
+        enableDebug: false
       });
     // 初始化云环境
     if (!wx.cloud) {

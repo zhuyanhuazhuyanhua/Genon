@@ -4,9 +4,9 @@ Page({
   data: {
     imageList: [
     
-      '/images/didanshenghuo.jpg',
-      '/images/guanghansenlin.jpg',
-      '/images/xidengyixioashi.jpg'
+      'cloud://gen-6g41ip5beb54cfa4.6765-gen-6g41ip5beb54cfa4-1344129462/images/didanshenghuo.jpg',
+      'cloud://gen-6g41ip5beb54cfa4.6765-gen-6g41ip5beb54cfa4-1344129462/images/guanghansenlin.jpg',
+      'cloud://gen-6g41ip5beb54cfa4.6765-gen-6g41ip5beb54cfa4-1344129462/images/xidengyixioashi.jpg'
     
     ],
     currentIndex: 0, // 当前显示的图片索引

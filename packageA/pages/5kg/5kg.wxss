@@ -1,0 +1,96 @@
+.container {
+ padding: 20px;
+}
+.item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+.node-label {
+  font-weight: bold;
+}
+.field {
+  margin-top: 5px;
+}
+.field-label {
+  color: #555;
+}
+
+/* app.wxss */
+.container_message {
+  padding: 20px;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+button {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #1aad19;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+}
+
+text {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* 样式文件 */
+.container {
+  padding: 20px;
+}
+
+.item {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 16px;
+  color: #666;
+}
+
+.name, .description {
+  display: block;
+}
+
+.custom-button {
+  /* 设置按钮的样式 */
+  position: absolute; /* 使用绝对定位 */
+  top: 0px; /* 距离顶部的距离 */
+  right: 0px; /* 距离右侧的距离 */
+  padding: 0px 0px; /* 内边距 */
+  font-size: 13px; /* 字体大小 */
+  background-color: #16ac3b83; /* 背景颜色 */
+  color: rgb(19, 6, 6); /* 文字颜色 */
+  border: 2px solid black; /* 添加黑色边框 */
+  border-radius: 10px; /* 圆角 */
+  outline: none; /* 去掉默认的按钮边框 */
+  cursor: pointer; /* 鼠标悬停时的样式 */
+  width: 5px; /* 设置按钮的宽度 */
+  height: 20px; /* 设置按钮的高度 */
+  overflow: hidden; /* 隐藏超出部分 */
+  white-space: nowrap; /* 禁止换行 */
+  z-index: 100; /* 设置一个较高的 z-index 值 */
+}
+
+.custom-button:active {
+  background-color: #00b35a; /* 按钮按下时的背景颜色 */
+}
+

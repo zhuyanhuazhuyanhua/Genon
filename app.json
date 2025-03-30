@@ -1,46 +1,16 @@
 {
-  "entryPagePath": "pages/go_login/go_login",
+  "entryPagePath": "pages/shop/shop",
   "pages": [
-    "pages/mods2/mods2",
+
     "pages/index/index",
-  
+    "pages/mods2/mods2",
     "pages/my/my",
     "pages/wool/wool",
     "pages/ai-helper/ai-helper",
     "pages/ai-painter/ai-painter",
-    "pages/1/1",
-    "pages/1kg/1kg",
-    "pages/2/2",
-    "pages/2kg/2kg",
-    "pages/3/3",
-    "pages/3kg/3kg",
-    "pages/4/4",
-    "pages/4kg/4kg",
-    "pages/5/5",
-    "pages/5kg/5kg",
-    "pages/6/6",
-    "pages/6kg/6kg",
-    "pages/7/7",
-    "pages/7kg/7kg",
-    "pages/8/8",
-    "pages/8kg/8kg",
-    "pages/9/9",
-    "pages/9kg/9kg",
-    "pages/10/10",
-    "pages/10kg/10kg",
-    "pages/11/11",
-    "pages/11kg/11kg",
-    "pages/12/12",
-    "pages/12kg/12kg",
-    "pages/13/13",
-    "pages/14/14",
-    "pages/14kg/14kg",
-    "pages/15/15",
-    "pages/15kg/15kg",
-    "pages/16/16",
-    "pages/16kg/16kg",
-    "pages/17/17",
-    "pages/17kg/17kg",
+    "pages/shop/shop",
+
+    
     "pages/mods/mods",
     "pages/mine/mine",
     "pages/kg/kg",
@@ -51,6 +21,56 @@
     "pages/register/register",
     "pages/openmv/openmv",
     "pages/wifi_station/tianqi/tianqi"
+  ],
+  "subPackages": [
+    {
+      "root": "packageA",
+      "pages": [
+        "pages/1/1",
+        "pages/1kg/1kg",
+        "pages/2/2",
+        "pages/2kg/2kg",
+        "pages/3/3",
+        "pages/3kg/3kg",
+        "pages/4/4",
+        "pages/4kg/4kg",
+        "pages/5/5",
+        "pages/5kg/5kg",
+        "pages/6/6",
+        "pages/6kg/6kg",
+        "pages/7/7",
+        "pages/7kg/7kg",
+        "pages/8/8",
+        "pages/8kg/8kg",
+        "pages/9/9",
+        "pages/9kg/9kg",
+        "pages/10/10",
+        "pages/10kg/10kg",
+        "pages/11/11",
+        "pages/11kg/11kg",
+        "pages/12/12",
+        "pages/12kg/12kg"
+    
+      ]
+   
+      
+    }, {
+      "root": "packageB",
+      
+      "pages": [
+        "pages/13/13",
+    "pages/14/14",
+    "pages/14kg/14kg",
+    "pages/15/15",
+    "pages/15kg/15kg",
+    "pages/16/16",
+    "pages/16kg/16kg",
+    "pages/17/17",
+    "pages/17kg/17kg",
+    "pages/18/18",
+    "pages/18kg/18kg"
+      ]
+    }
   ],
   "tabBar": {
     "list": [
@@ -96,6 +116,7 @@
     "enablePullDownRefresh": true,
     "backgroundColor": "#FFFFE0"
   },
+  "lazyCodeLoading": "requiredComponents",
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "requiredPrivateInfos": ["getLocation"],

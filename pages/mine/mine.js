@@ -3,7 +3,7 @@
 Page({
   data: {
 
-    userphono: '/images/蛇红包.png',
+    userphono: 'cloud://gen-6g41ip5beb54cfa4.6765-gen-6g41ip5beb54cfa4-1344129462/images/蛇红包.png',
     inputClass: 'input-empty',
     username: '',
     buttonHidden: false,

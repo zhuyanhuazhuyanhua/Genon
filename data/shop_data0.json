@@ -1,0 +1,86 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "花卉"
+    },
+    {
+      "id": 2,
+      "name": "种子"
+    },
+    {
+      "id": 3,
+      "name": "肥料"
+    },
+    {
+      "id": 4,
+      "name": "农药"
+    },
+    {
+      "id": 5,
+      "name": "工具"  
+    }
+  ],
+  "goods": [
+    {
+      "id": 1,
+      "categoryId": 5,
+      "name": "不锈钢锄头",
+      "description": "优质不锈钢材质，耐用防锈",
+      "price": 39.9,
+      "imageUrl": "/images/products/hoe.jpg",
+      "stock": 100,
+      "sales": 50
+    },
+    {
+      "id": 2,
+      "categoryId": 2,
+      "name": "有机番茄种子",
+      "description": "高产优质番茄种子，发芽率95%以上",
+      "price": 15.8,
+      "imageUrl": "https://img2.baidu.com/it/u=471731963,2708953727&fm=253&fmt=auto&app=138&f=JPEG?w=450&h=272",
+      "stock": 200,
+      "sales": 80
+    },
+    {
+      "id": 3,
+      "categoryId": 3,
+      "name": "有机复合肥",
+      "description": "纯天然有机肥料，促进作物生长",
+      "price": 45.0,
+      "imageUrl": "/images/products/fertilizer.jpg",
+      "stock": 150,
+      "sales": 60
+    },
+    {
+      "id": 4,
+      "categoryId": 4,
+      "name": "蚜虫特效药【15%氟啶虫酰胺•联苯菊酯】",
+      "description": "无毒无害生物农药，防治病虫害",
+      "price": 29.9,
+      "imageUrl": "https://img2.baidu.com/it/u=2279847627,1985211901&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1487",
+      "stock": 80,
+      "sales": 30
+    },
+    {
+      "id": 5,
+      "categoryId": 5,
+      "name": "园艺剪刀",
+      "description": "锋利耐用，适合修剪果树和花草",
+      "price": 25.8,
+      "imageUrl": "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fcbu01.alicdn.com%2Fimg%2Fibank%2FO1CN018OMkHA1tAO0uLlovQ_%21%212210822035861-0-cib.jpg&refer=http%3A%2F%2Fcbu01.alicdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1745764208&t=3e5782c03ed19a8d42b205eaf18a1e17",
+      "stock": 120,
+      "sales": 40
+    },
+    {
+      "id": 6,
+      "categoryId": 2,
+      "name": "黄瓜种子",
+      "description": "抗病高产黄瓜种子，适合温室种植",
+      "price": 12.5,
+      "imageUrl": "https://b0.bdstatic.com/d148fa5360bec5eb96b575ffab827780.jpg?x-bce-process=image/auto-orient,o_1/watermark,image_NDU0ZjAyZDU5YjQ1LnBuZw==,bucket_searchbox,w_43,text_QOmdkum4ouaaruWvkg==,type_RlpMYW5UaW5nSGVp,size_43,x_29,y_29,interval_4,color_FFFFFF,effect_softoutline,shc_000000,blr_2,align_1@h_1280",
+      "stock": 180,
+      "sales": 70
+    }
+  ]
+}

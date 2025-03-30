@@ -62,7 +62,7 @@ Page({
         console.log(`你点击了第 ${index + 1} 个花卉: ${flower}`);
         // 在这里可以添加更多的逻辑，例如跳转到花卉详情页面等
         wx.navigateTo({
-          url: `/pages/${index + 1}/${index + 1}`
+          url: `/packageA/pages/${index + 1}/${index + 1}`
       });
     }
   });
