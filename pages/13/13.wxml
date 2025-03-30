@@ -1,9 +1,0 @@
-<view class="container">
-  <block wx:for="{{depsVtabs}}" wx:key="index">
-    <view class="item">
-      <text class="name">省份：{{item['省份']}}</text>
-      <text class="description">地区：{{item['地区']}}</text>
-      <text class="description">总排放：{{item['总碳排放_万吨二氧化碳']}}万吨二氧化碳</text>
-    </view>
-  </block>
-</view>
