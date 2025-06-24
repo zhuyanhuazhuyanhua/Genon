@@ -11,4 +11,19 @@
   <view wx:else>
     <text>暂无相似度结果</text>
   </view>
+
+  <!-- 新增输入框和查询按钮 -->
+  <input placeholder="请输入待查询节点" bindinput="onQueryInputChange" data-field="queryName"/>
+  <button bindtap="queryTop5" style="width: 389rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">查询Top5相似节点</button>
+
+  <!-- 显示Top5相似节点结果 -->
+  <view wx:if="{{top5Result.length > 0}}">
+    <text>Top5相似节点:</text>
+    <view wx:for="{{top5Result}}" wx:key="index">
+      <text>名称: {{item.name}}, 相似度: {{item.similarity.toFixed(2)}}</text>
+    </view>
+  </view>
+  <view wx:else>
+    <text>暂无相似节点结果</text>
+  </view>
 </view>

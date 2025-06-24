@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "林木AI小助手"
+  "navigationBarTitleText": "神农分析助手",
+  "usingComponents": {
+    "towxml": "/wxcomponents/towxml/towxml"
+  }
 }

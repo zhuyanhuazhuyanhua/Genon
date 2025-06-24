@@ -1,7 +1,6 @@
 {
   "entryPagePath": "pages/shop/shop",
   "pages": [
-
     "pages/index/index",
     "pages/mods2/mods2",
     "pages/my/my",
@@ -9,9 +8,11 @@
     "pages/ai-helper/ai-helper",
     "pages/ai-painter/ai-painter",
     "pages/shop/shop",
-
-    
+    "pages/shuiwenshuixiang/shuiwenshuixiang",
+    "pages/mods1/mods1",
     "pages/mods/mods",
+    "pages/mods3/mods3",
+    "pages/mods4/mods4",
     "pages/mine/mine",
     "pages/kg/kg",
     "pages/mashang/mashang",
@@ -20,7 +21,8 @@
     "pages/go_login/go_login",
     "pages/register/register",
     "pages/openmv/openmv",
-    "pages/wifi_station/tianqi/tianqi"
+    "pages/wifi_station/tianqi/tianqi",
+    "pages/wifi_station/shipin/shipin"
   ],
   "subPackages": [
     {
@@ -59,16 +61,16 @@
       
       "pages": [
         "pages/13/13",
-    "pages/14/14",
-    "pages/14kg/14kg",
-    "pages/15/15",
-    "pages/15kg/15kg",
-    "pages/16/16",
-    "pages/16kg/16kg",
-    "pages/17/17",
-    "pages/17kg/17kg",
-    "pages/18/18",
-    "pages/18kg/18kg"
+        "pages/14/14",
+        "pages/14kg/14kg",
+        "pages/15/15",
+        "pages/15kg/15kg",
+        "pages/16/16",
+        "pages/16kg/16kg",
+        "pages/17/17",
+        "pages/17kg/17kg",
+        "pages/18/18",
+        "pages/18kg/18kg"
       ]
     }
   ],
@@ -83,16 +85,11 @@
 
       {
         "pagePath": "pages/my/my",
-        "text": "百花谱",
+        "text": "神农谱",
         "iconPath": "/images/低碳环保1.png",
         "selectedIconPath": "/images/低碳环保.png"
       },
-      {
-        "pagePath": "pages/wool/wool",
-        "text": "林木鉴",
-        "iconPath": "/images/植物1.png",
-        "selectedIconPath": "/images/植物.png"
-       },
+
        {
         "pagePath": "pages/tianqi/tianqi",
         "text": "天气",

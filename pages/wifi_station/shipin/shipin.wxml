@@ -1,0 +1,23 @@
+<!--shipin.wxml-->
+<view class="container">
+    <view class="image">
+        <image style="margin-top: 40px; justify-content: center; width: 200px; height: 200px; background-color: #eeeeee; position: relative; left: 176rpx; top: 8rpx" mode="{{item.mode}}" src="{{imgSrc}}"></image>
+      </view>
+    <button class='btn1' bindtap="sendCmd" data-index="1">前进</button>
+    <view class='btns'>
+      <button class='btn1' bindtap="sendCmdlt" data-index="2" style="position: relative; left: 38rpx; top: -20rpx">向左</button>
+      <!-- <button bindtap="sendCmd" data-index="4">停止</button> -->
+      <button class='btn1' bindtap="sendCmdrt" data-index="3" style="position: relative; left: 106rpx; top: -20rpx">向右</button>
+    </view>
+    <button class='btn2' bindtap="sendCmd" data-index="4">停止</button>
+    <view style="height: 20px;"></view>
+    <view class="text-container">
+      <text>蛀虫：{{Class_name}}</text>
+    </view>
+    <view class="text-container">
+      <text>匹配度(%)：{{Confidence}}</text>
+    </view>
+    <view class="text-container">
+      <text>拍摄日期：{{date}}</text>
+    </view>
+</view>

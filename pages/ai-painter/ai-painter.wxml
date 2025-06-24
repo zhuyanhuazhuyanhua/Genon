@@ -1,14 +1,61 @@
 <!-- ai-painter.wxml -->
+<view style="height: 20px;"></view>
 <view class="chat-container">
-  <scroll-view scroll-y class="chat-list">
-    <view class="messages">
-        <view class="message {{messages[messages.length - 1].role}}">
-            <text>{{messages[messages.length - 1].content}}</text>
+  <scroll-view upper-threshold="0" bindscrolltoupper="scrolltoupper" class="scroll-wrap" scroll-into-view="translate-fake" scroll-y="{{true}}" enhanced="{{true}}">
+    <view class="unit-view">
+      <view class="text">
+        <image class="header" src="https://lingjing-online.cdn.bcebos.com/v1/lingjing-online/agent_logo/2025-01-16/477cf247-1de3-4389-827e-e72f2a7914fb.JPEG"></image>
+        <view class="leftView">
+          <text>你好，我是神农分析助手。可以根据你提供的关于作物生长状态的信息进行分析，并提供相关的建议。</text>
         </view>
+      </view>
     </view>
-</scroll-view>
-    <view class="input-area">
-        <input type="text" placeholder="请输入内容" bindinput="handleInput" class="message-input"  />
-        <button class="send-button" bindtap="sendChatMessage" disabled="{{isLoading}}" loading="{{isLoading}}">发送</button>
+    <block wx:for="{{messages}}" wx:key="index">
+      <view class="unit-view">
+          <view wx:if="{{item.role === 'user-message'}}" class="queryCard">
+            <image class="userHeader" src="https://lingjing-online.cdn.bcebos.com/v1/lingjing-online/agent_logo/2024-05-18/3e19e416-5083-4c3e-8d68-aa3ad359ff42.png"></image>
+            <view class="rightView">
+              <text>{{item.content}}</text>
+            </view>
+          </view>
+          <view wx:else class="text">
+            <image class="header" src="https://lingjing-online.cdn.bcebos.com/v1/lingjing-online/agent_logo/2024-05-18/f6fab95a-deae-4825-88e4-dc93962e862c.png"></image>
+            <view class="leftView">
+              <towxml nodes="{{articleInfo}}"/>
+            </view>
+          </view>
+      </view>
+    </block>
+  </scroll-view>
+      <view class="input-area">
+        <scroll-view scroll-y="true" style="width: 100%; height: 300rpx;">
+        <view class="input-area2">
+          <input placeholder="作物名称" value="{{selectedValue}}" bindfocus="showPicker" bindinput="handleInput" class="message-input" data-index="0"/>
+            <view wx:if="{{showModal}}" class="modal">
+              <view class="modal-content">
+                <input placeholder="搜索作物" bindinput="onSearchInput" />
+                <view wx:for="{{filteredRange}}" wx:key="index" bindtap="onSelectResult" data-value="{{item}}">
+                  <text>{{item}}</text>
+                  <text class="expand-icon" style="position: relative; left: 570rpx; top: -45rpx">{{expanded[index] ? '收起' : '展开'}}</text>
+                </view>
+                <button bindtap="closePicker">关闭</button>
+              </view>
+            </view>
+          <input type="text" placeholder="SDI" bindinput="handleInput" class="message-input" data-index="1"/>
+          <input type="text" placeholder="纬度" bindinput="handleInput" class="message-input" data-index="2"/>
+          <input type="text" placeholder="经度" bindinput="handleInput" class="message-input" data-index="3"/>
+          <input type="text" placeholder="海拔" bindinput="handleInput" class="message-input" data-index="4"/>
+          <input type="text" placeholder="年平均降水量" bindinput="handleInput" class="message-input" data-index="5"/>
+          <input type="text" placeholder="年均温" bindinput="handleInput" class="message-input" data-index="6"/>
+          <input type="text" placeholder="坡度" bindinput="handleInput" class="message-input" data-index="7"/>
+          <input type="text" placeholder="坡向" bindinput="handleInput" class="message-input" data-index="8"/>
+          <input type="text" placeholder="坡位" bindinput="handleInput" class="message-input" data-index="9"/>
+          <input type="text" placeholder="土壤厚度" bindinput="handleInput" class="message-input" data-index="10"/>
+          <input type="text" placeholder="郁闭度" bindinput="handleInput" class="message-input" data-index="11"/>
+          <input type="text" placeholder="胸径" bindinput="handleInput" class="message-input" data-index="11"/>
+          <input type="text" placeholder="树龄" bindinput="handleInput" class="message-input" data-index="11"/>
+          <button class="send-button" bindtap="sendChatMessage" disabled="{{isLoading}}" loading="{{isLoading}}" >发送</button>
+        </view>
+      </scroll-view>
     </view>
 </view>

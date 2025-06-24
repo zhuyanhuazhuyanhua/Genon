@@ -6,6 +6,20 @@
   line-height: 1.5;
 }
 
+.tree-painter-button{
+  margin-top: 50px;
+  max-width: 500rpx;
+  height: 150rpx;
+  background: #f0f3f0;
+  color: rgb(233, 55, 55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* 设置为垂直布局 */
+  border-radius: 30rpx;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .btn1{
   width: 60%;
 }

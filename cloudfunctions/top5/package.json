@@ -1,0 +1,9 @@
+{
+  "name": "top5",
+  "version": "1.0.0",
+  
+  "dependencies": {
+    "neo4j-driver": "^5.28.1",
+    "wx-server-sdk": "^3.0.1"
+  }
+}

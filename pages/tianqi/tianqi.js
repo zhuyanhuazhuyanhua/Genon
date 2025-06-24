@@ -1,3 +1,4 @@
+const app = getApp()
 Page({
   data: {
     region: ['北京市', '北京市', '东城区'],
@@ -24,6 +25,8 @@ Page({
  
   regionChange: function(e) {
     this.setData({ region: e.detail.value });
+    app.globalData.location = this.data.region[1];
+    console.log("app.globalData.location",app.globalData.location)
     this.getWeather();
   },
  

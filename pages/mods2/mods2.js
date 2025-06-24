@@ -1,94 +1,82 @@
-// pages/mods2/mods2.js
 Page({
+  data: {
+    lon: '', // 经度
+    lat: '', // 纬度
+    result: '' // 用于存储格式化的返回数据
+  },
 
-        data: {
-          messages: [],
-          inputValue: '',
-          isLoading: false
-        },
-        handleInput: function (e) {
-          this.setData({
-            inputValue: e.detail.value
+  // 经度输入框绑定
+  onLonInput(e) {
+    this.setData({
+      lon: e.detail.value
+    });
+  },
+
+  // 纬度输入框绑定
+  onLatInput(e) {
+    this.setData({
+      lat: e.detail.value
+    });
+  },
+
+  // 发送请求
+  sendRequest() {
+    const { lon, lat } = this.data;
+    if (!lon || !lat) {
+      console.error('请输入完整的经纬度！');
+      wx.showToast({
+        title: '请输入完整的经纬度！',
+        icon: 'none'
+      });
+      return;
+    }
+
+    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJzZGMtYXBpIiwic2RjLWFwcCJdLCJleHAiOjE3NDM1OTk2NDIsImp0aSI6ImFhY2U2NTk4LTU0ODEtNDMyYy05ZjJiLWI1ZjFlNmZjYTU1MSIsImNsaWVudF9pZCI6Im1hcmtldF9hcGkwMSJ9.hshgxyCgYhy1uEXf8RbrvzJZyhe3upLuw5ZMHVzmJP8';
+    const url = 'https://market.myvessel.cn/sdc/v1/mkt/weather/forecast/stream';
+
+    wx.request({
+      url: url,
+      method: 'POST',
+      header: {
+        'accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+      data: JSON.stringify({
+        lon: parseFloat(lon),
+        lat: parseFloat(lat)
+      }),
+      success: (res) => {
+        console.log('请求成功，返回数据：', res.data);
+        if (res.data && res.data.data) {
+          // 假设 res.data.data 是一个数组
+          let formattedData = ''; // 用于存储格式化后的数据字符串
+          res.data.data.forEach((windData, index) => {
+            formattedData += `
+              第${index + 1}条数据：
+              时间：${windData.dateHourString}，
+              流速：${windData.streamSpeed}，
+              流向：${windData.streamDirectionDescCn}
+          
+             
+            `;
           });
-        },
-        sendChatMessage: function () {
           this.setData({
-            isLoading: true
+            result: formattedData
           });
-          // 这里可以添加发送消息的逻辑，例如调用 API 发送消息
-          // 当消息发送成功或失败后，需要将 isLoading 设置为 false
-          setTimeout(() => {
-            // 模拟发送消息的延迟，实际应用中应替换为真实的 API 调用
-            const newMessage = {
-              role: 'user',
-              content: this.data.inputValue
-            };
-            this.setData({
-              messages: [...this.data.messages, newMessage],
-              inputValue: '',
-              isLoading: false
-            });
-          }, 2000);
-        },
-
-  /**
-   * 页面的初始数据
-   */
-
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+        } else {
+          this.setData({
+            result: '未获取到有效的数据'
+          });
+        }
+      },
+      fail: (err) => {
+        console.error('请求失败，错误信息：', err);
+        wx.showToast({
+          title: '请求失败，请稍后重试',
+          icon: 'none'
+        });
+      }
+    });
   }
-})
+});

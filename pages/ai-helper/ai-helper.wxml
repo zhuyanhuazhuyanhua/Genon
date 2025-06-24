@@ -1,21 +1,42 @@
+<view style="height: 20px;"></view>
 <view class="chat-container">
   <!-- 聊天记录 -->
-  <scroll-view scroll-y class="chat-list">
+  <scroll-view upper-threshold="0" bindscrolltoupper="scrolltoupper" class="scroll-wrap" scroll-into-view="translate-fake" scroll-y="{{true}}" enhanced="{{true}}">
+    <view class="unit-view">
+      <view class="text">
+        <image class="header" src="https://lingjing-online.cdn.bcebos.com/v1/lingjing-online/agent_logo/2024-05-18/f6fab95a-deae-4825-88e4-dc93962e862c.png"></image>
+        <view class="leftView">
+          <text>你好，我是神农咨询助手，你可以告诉我想在何时、何地种植何种作物。我来为你当地政策和作物价格等信息</text>
+        </view>
+      </view>
+    </view>
     <block wx:for="{{chatHistory}}" wx:key="index">
-      <view class="message {{item.role === 'user' ? 'user-message' : 'ai-message'}}">
-        <text>{{item.content}}</text>
-        <image wx:if="{{item.imageUrl}}" src="{{item.imageUrl}}" mode="aspectFit" style="width: 100%; height: auto;" />
+      <view class="unit-view">
+          <view wx:if="{{item.role === 'user'}}" class="queryCard">
+            <image class="userHeader" src="https://lingjing-online.cdn.bcebos.com/v1/lingjing-online/agent_logo/2024-05-18/3e19e416-5083-4c3e-8d68-aa3ad359ff42.png"></image>
+            <view class="rightView">
+              <text>{{item.content}}</text>
+            </view>
+          </view>
+          <view wx:else class="text">
+            <image class="header" src="https://lingjing-online.cdn.bcebos.com/v1/lingjing-online/agent_logo/2024-05-18/f6fab95a-deae-4825-88e4-dc93962e862c.png"></image>
+            <view class="leftView">
+              <!--<text>{{item.content}}</text>-->
+              <towxml nodes="{{articleInfo}}"/>
+              <image wx:if="{{item.imageUrl}}" src="{{item.imageUrl}}" mode="aspectFit" style="width: 100%; height: auto;" />
+            </view>
+          </view>
       </view>
     </block>
   </scroll-view>
 
   <!-- 输入区域 -->
-  <view class="input-area">
+  <view class="input-area1">
     <input 
       class="message-input" 
       value="{{inputMessage}}" 
       bindinput="onInputChange"
-      placeholder="请输入您的问题"
+      placeholder="提问格式：x年在x市x区种植x"
       disabled="{{isLoading}}"
     />
     <button 

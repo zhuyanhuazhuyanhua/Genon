@@ -1,4 +1,5 @@
 var myCharts = require("../../../utils/wxcharts.js")//引入一个绘图的插件
+const app = getApp()
 
 Page({
   data: {},
@@ -66,10 +67,10 @@ Page({
   getDatapoints: function () {
     return new Promise((resolve, reject) => {
       wx.request({
-        url: `https://iot-api.heclouds.com/thingmodel/query-device-property?product_id=a6p0HtV4TA&device_name=chuyan`,
+        url: `https://iot-api.heclouds.com/thingmodel/query-device-property?product_id=872J3JNuv6&device_name=mqtt1`,
         header: {
           'content-type': 'application/json',
-          'authorization': "version=2018-10-31&res=products%2Fa6p0HtV4TA%2Fdevices%2Fchuyan&et=2039629218&method=md5&sign=yyqobxQC51HFiPptXyBt5w%3D%3D"
+          'authorization': app.data.master_api_key
         },
         success: (res) => {
           const response = res.data.data[0];

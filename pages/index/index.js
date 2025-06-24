@@ -25,7 +25,8 @@ Page({
         currentIndex: nextIndex
       });
       // 滚动到下一张图片
-      this.selectComponent('.scroll-view').scrollIntoView('item' + nextIndex);
+      //console.log("nextIndex:",nextIndex)
+      //this.selectComponent('.scroll-view').scrollIntoView(this.data.imageList[nextIndex]);
     }, this.data.autoplayInterval);
   },
   stopAutoplay: function() {
@@ -35,7 +36,7 @@ Page({
   },
   onScroll: function(event) {
     // 你可以在这里处理滚动事件
-    console.log('滚动位置:', event.detail.scrollLeft);
+    //console.log('滚动位置:', event.detail.scrollLeft);
   },
 
 
@@ -56,7 +57,7 @@ Page({
   goToMods() {
     console.log('Navigating to Mods');
     wx.navigateTo({
-      url: '/pages/mods/mods'
+      url: '/pages/shuiwenshuixiang/shuiwenshuixiang'
     });
   },
   goToContact() {

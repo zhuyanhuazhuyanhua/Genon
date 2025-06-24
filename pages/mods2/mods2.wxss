@@ -1,49 +1,48 @@
-/* pages/mods2/mods2.wxss */
-.chat-container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-  }
-  
-  .chat-list {
-    flex: 1;
-    overflow-y: auto;
-  }
-  
-  .messages {
-    padding: 10px;
-  }
-  
-  .message {
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .message.user {
-    background-color: #007AFF;
-    color: white;
-    align-self: flex-end;
-  }
-  
-  .input-area {
-    display: flex;
-    padding: 10px;
-    background-color: #F5F5F5;
-  }
-  
-  .message-input {
-    flex: 1;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .send-button {
-    margin-left: 10px;
-    padding: 5px 10px;
-    background-color: #007AFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-  }
+.container {
+  padding: 20px;
+  font-size: 16px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group text {
+  margin-right: 10px;
+}
+
+button {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #007aff;
+  color: white;
+}
+
+.debug-area {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.debug-text {
+  white-space: pre-wrap; /* 保留换行和空格 */
+}
+
+.container {
+  padding: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group text {
+  margin-right: 10px;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333;
+}

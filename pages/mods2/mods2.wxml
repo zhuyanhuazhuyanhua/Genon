@@ -1,17 +1,17 @@
-<!--pages/mods2/mods2.wxml-->
-<text>pages/mods2/mods2.wxml</text>
-<view class="chat-container">
-  <scroll-view scroll-y class="chat-list">
-    <view class="messages">
-        <view class="message {{messages[messages.length - 1].role}}">
-            <text>{{messages[messages.length - 1].content}}</text>
-        </view>
-    </view>
-</scroll-view>
-    <view class="input-area">
-        <input type="text" placeholder="请输入内容" bindinput="handleInput" class="message-input" />
-        <button bindtap="sendChatMessage" class="send-button"
-            disabled="{{isLoading}}"
-            loading="{{isLoading}}" >发送</button>
-    </view>
+<view class="container">
+  <view class="input-group">
+    <text>经度：</text>
+    <input type="number" placeholder="请输入经度" bindinput="onLonInput" />
+  </view>
+  <view class="input-group">
+    <text>纬度：</text>
+    <input type="number" placeholder="请输入纬度" bindinput="onLatInput" />
+  </view>
+  <button bindtap="sendRequest">发送请求</button>
+
+  <!-- 显示返回数据 -->
+  <view class="result">
+    <text>返回数据：</text>
+    <text>{{result}}</text>
+  </view>
 </view>

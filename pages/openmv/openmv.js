@@ -5,9 +5,14 @@ Page({
 
   },
   //跳转到天气页面
-  navigate: function() {
+  goToOneNet: function() {
       wx.navigateTo({
           url: '../wifi_station/tianqi/tianqi',
       })
-  }
+  },
+  goToOpMV: function() {
+    wx.navigateTo({
+        url: '../wifi_station/shipin/shipin',
+    })
+}
 })

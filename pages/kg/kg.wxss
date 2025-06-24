@@ -54,4 +54,10 @@
     margin-top: 15px;
     color: #333;
   }
+
+  /* 新增Top5结果文本样式 */
+  view text {
+    display: block;
+    margin: 5px 0;
+  }
   

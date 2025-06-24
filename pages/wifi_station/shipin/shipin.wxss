@@ -1,0 +1,47 @@
+/**shipin.wxss**/
+text {
+  font-size: 35rpx;
+  color: #3C5F81;
+}
+
+.text-container {
+  display: flex;
+  justify-content: center; /* 使内容在容器内居中 */
+  align-items: center;     /* 垂直居中 */
+  width: 100%;             /* 确保容器宽度足够大 */
+}
+
+.btns {
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* 水平居中左右分布 */
+  width: 80%;
+  gap: 20rpx; /* 中间隔开 */
+  
+}
+.btn1 {
+  margin-top: 40rpx;
+  width: 20%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.btn2 {
+  margin-top: 40rpx;
+  width: 20%;
+  background-color: green;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tree-painter-button{
+  top: 50px;
+  max-width: 290rpx;
+  height: 290rpx;
+  background: #f0f3f0;
+  color: rgb(12, 150, 86);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* 设置为垂直布局 */
+  border-radius: 30rpx;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

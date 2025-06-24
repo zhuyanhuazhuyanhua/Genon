@@ -1,117 +1,82 @@
-// index.js
 Page({
   data: {
-    showMessage: false,
-    message: '',
-    userphono: '/images/蛇红包.png',
-    username: '',
-    inputClass: "input-empty",
-    name: '',
-    userNickname: '',//
-    buttonHidden: false
+    lon: '', // 经度
+    lat: '', // 纬度
+    result: '' // 用于存储格式化的返回数据
   },
-// 在微信小程序的.js 文件中
 
-  onButtonClick: function() {
+  // 经度输入框绑定
+  onLonInput(e) {
     this.setData({
-      buttonHidden: true
+      lon: e.detail.value
     });
   },
 
-
-  onInput: function (e) {
-    let username = e.detail.value;
+  // 纬度输入框绑定
+  onLatInput(e) {
     this.setData({
-      username: username,
-      inputClass: username.length === 0 ? "input-empty" : "input-filled"
+      lat: e.detail.value
     });
-    console.log(this.data.username);
   },
-  getPhoneNumber(event) {
-    console.log(event)
 
-    console.log(event.detail.code)  // 动态令牌
-    console.log(event.detail.errMsg) // 回调信息（成功失败都会返回）
-    console.log(event.detail.errno)  // 错误码（失败时返回）
+  // 发送请求
+  sendRequest() {
+    const { lon, lat } = this.data;
+    if (!lon || !lat) {
+      console.error('请输入完整的经纬度！');
+      wx.showToast({
+        title: '请输入完整的经纬度！',
+        icon: 'none'
+      });
+      return;
+    }
+
+    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJzZGMtYXBpIiwic2RjLWFwcCJdLCJleHAiOjE3NDM1OTc2NzUsImp0aSI6ImE1NDEwZTRlLTE4NTMtNGYzYS05NWEzLWI5NTM3MTk3NTBhMiIsImNsaWVudF9pZCI6Im1hcmtldF9hcGkwMSJ9.pDiZWveUDgqEb6oup4S3TLawpXzSTnhac4v-Mp52suM';
+    const url = 'https://market.myvessel.cn/sdc/v1/mkt/weather/forecast/wind';
+
     wx.request({
-      url: 'http://localhost:8000/login/',
-      data: { code: event.detail.code },
-      dataType: 'json',
-      header: this.data.header,
-      method: "POST",
-      responseType: this.data.responseType,
-      timeout: 10000, // 设置超时时间为10秒
-      success: (result) => {
-        console.log('请求成功', result);
+      url: url,
+      method: 'POST',
+      header: {
+        'accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
       },
-      fail: (err) => {
-        console.log('请求失败', err);
-      },
-      complete: (res) => {
-        console.log('请求完成', res);
-      },
-    })
-  },
-
-  onLoad: function () {
-    // this.getUserName();
-  },
-
-  choosePhoto(event) {
-    console.log(event)
-    this.setData({
-      userphono: event.detail.avatarUrl
-    })
-
-  },
-  onLoginButtonTap: function () {
-    var that = this;
-    wx.login({
-      success: function (res) {
-        if (res.code) {
-          wx.request({
-            url: 'https://your-server-url.com/login',
-            data: {
-              code: res.code
-            },
-            success: function (response) {
-              // 服务器会使用 code 换取 openid 和 session_key 等信息
-              console.log(response.data);
-              that.setData({
-                showMessage: true,
-                message: '登录成功'
-              });
-            },
-            fail: function (error) {
-              that.setData({
-                showMessage: true,
-                message: '登录失败，请重试'
-              });
-              console.log(error);
-            }
+      data: JSON.stringify({
+        lon: parseFloat(lon),
+        lat: parseFloat(lat)
+      }),
+      success: (res) => {
+        console.log('请求成功，返回数据：', res.data);
+        if (res.data && res.data.data) {
+          // 假设 res.data.data 是一个数组
+          let formattedData = ''; // 用于存储格式化后的数据字符串
+          res.data.data.forEach((windData, index) => {
+            formattedData += `
+              第${index + 1}条数据：
+              时间：${windData.dateHourString}，
+              风速：${windData.windSpeed}，
+              风型：${windData.windSpeedDescCn}，
+              风级：${windData.windLevelDescCn}，
+              风向：${windData.windDirectionDescCn}
+            `;
+          });
+          this.setData({
+            result: formattedData
           });
         } else {
-          that.setData({
-            showMessage: true,
-            message: '登录失败！' + res.errMsg
+          this.setData({
+            result: '未获取到有效的数据'
           });
-          console.log('登录失败！' + res.errMsg);
         }
+      },
+      fail: (err) => {
+        console.error('请求失败，错误信息：', err);
+        wx.showToast({
+          title: '请求失败，请稍后重试',
+          icon: 'none'
+        });
       }
     });
-  },
-  onShareAppMessage() {
-    return {
-      title: '神农再现modes',
-      query: 'name=justin&age=19',
-      imageUrl: '/images/生物能源-2.png'
-    }
-  },
-  onShareTimeline() {
-    return {
-      title: '神农再现modes',
-      query: 'name=justin&age=19',
-      imageUrl: '/images/生物能源-2.png'
-    }
   }
 });

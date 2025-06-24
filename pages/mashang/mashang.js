@@ -25,7 +25,7 @@ Page({
 
     wx.request({
       url: 'https://agentapi.baidu.com/assistant/conversation?appId=WHNtFgW5SyWUFmXRevTMhm0ugTIkKAbr&secretKey=qADNcRPAyM4OcvbUe5XwcBPaQbClKea8',
-      timeout:100000,
+      timeout: 100000,
       method: 'POST',
       header: {
         'Content-Type': 'application/json'
@@ -108,5 +108,60 @@ Page({
         });
       }
     });
+  },
+  // 上传 PDF 文件函数
+  uploadPDF() {
+    const that = this;
+    wx.chooseMessageFile({
+      count: 1, // 上传文件数量
+      type: 'file',
+      success(res) {
+        // tempFilePath可以作为img标签的src属性显示图片
+        const tempFilePaths = res.tempFiles
+        console.log('选择', res);
+        console.log(tempFilePaths);
+        tempFilePaths.forEach(i => {
+          console.log(i);
+          wx.uploadFile({
+            url: "your_backend_api_url/fileUpload/upload-image", // 后台给的接口
+            filePath: i.path,
+            name: 'file',
+            method: "post",
+            header: {
+              "content-type": "multipart/form-data",
+              "Authorization": wx.getStorageSync("token")
+            },
+            success(res) {
+              console.log(res);
+              // 上传成功后的一些操作
+              wx.hideLoading();
+              let rs = JSON.parse(res.data);
+              if (rs.code == 0) {
+                var str = rs.data.path
+                console.log(str);
+                var newStr = str.slice(0, 4) + 's' + str.slice(4)
+                const files = [];
+                for (var j = 0; j < tempFilePaths.length; j++) {
+                  files.push({ name: tempFilePaths[j].name, path: newStr })
+                }
+                that.setData({
+                  files: files
+                })
+                console.log(that.data.files);
+              } else {
+                that.setData({
+                  message: "上传失败,稍后重试"
+                });
+                setTimeout(() => {
+                  that.setData({
+                    message: ""
+                  });
+                }, 2500);
+              }
+            }
+          })
+        })
+      }
+    })
   }
 });

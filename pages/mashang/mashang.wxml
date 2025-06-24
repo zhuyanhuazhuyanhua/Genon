@@ -10,5 +10,6 @@
     <view class="input-area">
         <input type="text" placeholder="请输入内容" bindinput="handleInput" class="message-input" />
         <button bindtap="sendChatMessage" class="send-button">发送</button>
+        <button bindtap="uploadPDF" style="width: 200rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx; height: 72rpx">上传 PDF</button>
     </view>
 </view>
